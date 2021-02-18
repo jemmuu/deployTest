@@ -15,12 +15,12 @@ export class DataService {
                                   {
                                     'id' : 2,
                                     'name':'jemmu',
-                                     'bday' : '25 aug',
+                                     'bday' : '4 feb',
                                    },
                                    {
                                     'id' : 3,
                                     'name':'jemes',
-                                     'bday' : '25 aug',
+                                     'bday' : '1 may', 
                                    }
 
 

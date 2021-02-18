@@ -3,11 +3,14 @@
 <ul>
     <li *ngFor='let datak of data'>
 
-                <a [routerLink]="['/parent', datak.id]"> {{datak.name}}</a>
+      <a [routerLink]="['/parent', datak.id]" 
+        [queryParams]="{page :1, order :'asc'}"> 
+        
+        {{datak.name}}
+    
+      </a>
 
     </li>
 
 </ul>
 <router-outlet></router-outlet>
-
-

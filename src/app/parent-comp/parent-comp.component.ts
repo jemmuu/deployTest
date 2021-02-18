@@ -10,7 +10,7 @@ export class ParentCompComponent implements OnInit {
 
   data;
   
-  constructor(service:DataService) {
+  constructor(private service:DataService) {
 
   this.data = service.getObject();
    }
@@ -18,6 +18,8 @@ export class ParentCompComponent implements OnInit {
 
    
   ngOnInit(): void {
+
+    
   }
 
 }
