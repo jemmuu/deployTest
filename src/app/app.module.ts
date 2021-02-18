@@ -9,9 +9,9 @@ import { ParentCompComponent } from './parent-comp/parent-comp.component';
 import { ChildComponent } from './child/child.component';
 import { FormsModule } from '@angular/forms';
 import { PointAComponent } from './point-a/point-a.component';
-import { HttpTestComponent } from './http-test/http-test.component';
-import { globalErrorHandler } from './common/global-error-handler';
+
 import { RouterModule } from '@angular/router';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,7 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     ParentCompComponent,
     ChildComponent,
-    PointAComponent,
-    HttpTestComponent
+    PointAComponent
     
   ],
   imports: [
@@ -35,9 +34,9 @@ import { RouterModule } from '@angular/router';
     preventDuplicates: true,
     resetTimeoutOnDuplicate : true,
     countDuplicates : true
-    }),
+    })
   ],
-  providers: [{provide : ErrorHandler , useClass : globalErrorHandler}],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

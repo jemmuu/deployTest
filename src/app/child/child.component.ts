@@ -11,45 +11,51 @@ import { DataService } from '../data.service';
 
 
 
-export class ChildComponent implements OnInit {
+export class ChildComponent {
 
-  data;
+   data : any;
   tempData: any;
   pname: any;
 
-  constructor(service: DataService, private route: ActivatedRoute) {
+  constructor(private service: DataService, private route: ActivatedRoute) {
 
-    this.data = service.getObject();
     
+
 
   }
 
   ngOnInit() {
 
     
+    this.route.paramMap
+      .subscribe(param => {
+        let id: number = Number(param.get('id'));
+        console.log(id);
+        this.data = this.service.getObject();
+        for (let datak of this.data) {
+          if (datak.id == id) {
+            this.tempData = datak;
+            console.log(this.tempData);
+
+          }};
+        });
+
+
+
+
 
   }
   //index;
-  onload()
-  {
-    this.pname = this.route.snapshot.paramMap.get('name');
-    console.log(this.pname);
-
-    this.getData();
-  }
-
-  interval()
-  {
 
 
-  }
-  getData() {
+
+  getData(id: number) {
     for (let datak of this.data) {
 
 
 
 
-      if (datak.name == this.pname) {
+      if (datak.id == id) {
         this.tempData = datak;
 
       }

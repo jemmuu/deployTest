@@ -3,10 +3,11 @@
 <ul>
     <li *ngFor='let datak of data'>
 
-                <a [routerLink]="['/parent', datak.name]"> {{datak.name}}</a>
+                <a [routerLink]="['/parent', datak.id]"> {{datak.name}}</a>
 
     </li>
 
 </ul>
-
 <router-outlet></router-outlet>
+
+

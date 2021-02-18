@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-
+@Injectable()
 export class DataService {
 
   constructor() { }
@@ -8,14 +8,17 @@ export class DataService {
   getObject(){
                        let b = [
                                   {
+                                    'id' : 1,
                                    'name':'jemish',
                                     'bday' : '25 aug',
                                   },
                                   {
+                                    'id' : 2,
                                     'name':'jemmu',
                                      'bday' : '25 aug',
                                    },
                                    {
+                                    'id' : 3,
                                     'name':'jemes',
                                      'bday' : '25 aug',
                                    }

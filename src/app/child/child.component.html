@@ -1,11 +1,10 @@
-{{onload()}}
 
-<div *ngIf='tempData' (load)='getData()'>
 
-<h1 [(ngModel)]='tempData'>{{tempData.name}}</h1>
+<div *ngIf='tempData'>
+
+<h1 >{{tempData.name}}</h1>
 <h1>{{tempData.bday}}</h1>
-</div>
+</div> 
 
 <p>hwllo</p>
 
-<router-outlet></router-outlet>

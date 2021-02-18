@@ -7,16 +7,20 @@ import { ParentCompComponent } from './parent-comp/parent-comp.component';
 const routes: Routes = [
 
 {path:''  , component:HomeComponent},
+// {path: 'parent/:id', component: ChildComponent},
+
 {
     path:'parent'  , 
     component:ParentCompComponent,
-    children:[
+    children : [
 
-      {path:':name',component:ChildComponent   },
+        {path: ':id', component: ChildComponent}
 
     ]
+    
+    
+},
   
-  }
 
 ];
 
